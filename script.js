@@ -1,5 +1,4 @@
-const persons = [
-    {
+const persons = [{
         imie: 'kuba',
     },
     {
@@ -31,27 +30,26 @@ const persons = [
     },
 ];
 
-
-
 persons.forEach((persons, index) => {
     const p = document.createElement('p')
+    const cont = document.querySelector('.persons__cont')
     p.innerText = `${index + 1}. ${persons.imie}`
-    document.body.appendChild(p)
+    cont.appendChild(p)
+    p.classList.add('person')
+    
 })
 
 // pętle zagnieżdżone
 let x = '*'
-for(i = 1; i <= 5; i++){
+for (i = 1; i <= 5; i++) {
     console.log(x)
-    x +='*'
+    x += '*'
 }
 x = '*****'
-for(i = 1; i <= 5; i++){
+for (i = 1; i <= 5; i++) {
     console.log(x.slice(i - 1))
 }
-for(i = 1; i <=5 ; i++){
+for (i = 1; i <= 5; i++) {
     let x = '1 2 3 4 5'
     console.log(x + " ".repeat(i))
 }
-
-
